@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="images/amazon_icon.jpg">
+    <title>Questionnaire sur l'interface usager d'Amazon</title>
+  </head>
+  
+  <body>
+  	<div class="survey">
+		<h1> Sondage sur l'interface </h1>
+		<form id="myform" action="index.php" >
+		<br>
+		<br>
+		
+		<h3></h3>
+		<h2>Qu'avez vous pensé de l'interface utilisateur d'<a href="https://www.amazon.ca">Amazon</a> ?<br> Votre avis compte!</h2>	
+		<br>
+		<br>
+		
+		<img src="images/Amazon_IU.png" width="1000" height="500" alt="https://www.amazon.ca"  usemap="#workmap" >
+
+		<map name="workmap">
+		  <area shape="rect"  coords="0,0,1901,904" alt="Amazon" href="https://www.amazon.ca">
+		</map>
+		<br>
+		<br >
+		<div class="question">
+			<p>1. Que pensez vous de l'interface usager sur le plan esthétique ?<br></p>
+			<input class= "text" type="text" name="firstname">
+			<br>
+			<br>	
+		</div>	
+			
+		<div class="question">
+			<p>2. L'interface vous a t-il donné confiance au site si bien que vous pourriez partager vos informations personnelles et bancaires ? <br></p>
+			<input type="radio" name="Oui" value="Oui">Oui, l'interface  m'a donné confiance au site<br>
+			<input type="radio" name="Oui" value="Non">Non, l'interface ne m'a pas donné confiance au site<br>
+		</div>
+		<div class="question">
+			<p>3. Avez vous pu trouver rapidement votre/vos article(s)?<br></p>
+			<input type="radio" name="Oui" value="Oui">Oui<br>
+			<input type="radio" name="Oui" value="Non">Non<br>
+			
+		</div>
+		<div class="question">
+			<p>4. Avez vous éprouvé l'une des difficultés suivantes ?</p>
+			<input type="checkbox" name="Oui" value="Difficulté1">Difficulé à modifier les articles du panier<br>
+			<input type="checkbox" name="Non" value="Difficulté2">Difficulté à passer la commande<br>
+			<input type="checkbox" name="Non" value="Difficulté3">Difficulté à consulter les détails des articles<br>
+			<input type="checkbox" name="Non" value="Difficulté4">Difficulté à acheter plusieurs quantités d'un même article<br>
+			<input type="checkbox" name="Non" value="Autres">Autres difficultés<br>
+			<input type="checkbox" name="Non" value="Aucune">Aucune difficulté n'a été éprouvée
+		<br>
+		</div>
+		<div class="question">
+			<p>5. Comment jugez vous l'interface usager d'Amazon par rapport à celui d'autres sites que vous avez eu à visiter ?<br></p>
+			<select id="favorite">
+				<option value="facile" selected="selected">L'interface est plus facile à utiliser</option>
+				<option value="difficile">L'interface est plus difficile à utiliser</option>
+				<option value="autre">Je visite un site de commerce en ligne pour la première fois</option>
+				
+			</select>
+
+		</div>
+		<div class="question">
+			<p>6. La disposition des boutons et le choix des couleurs sont cohérents.<br></p>
+			<input type="radio" name="Oui" value="affirme">Je l'affirme<br>
+			<input type="radio" name="Oui" value="disposition">Seulement la disposition des boutons est cohérente<br>
+			<input type="radio" name="Oui" value="couleur">Seulement le choix des couleurs est cohérent<br>
+			<input type="radio" name="Oui" value="aucun">Ni l'un ni l'autre<br>
+			
+		</div>
+		<div class="question">
+			<p>Avez vous des commentaires ou suggestions afin d'améliorer l'interface? Laissez nous savoir ! </p><br>
+			<textarea rows="5" cols="90"></textarea>
+		</div>
+		<br>
+		
+				
+		<br>
+		<br>
+				
+		<button id="submitButton" type="button" class="block">
+			SOUMETTRE
+		</button>	
+		</form>
+		<footer>
+			<p id="signature">Site Web conçu par Senpai</p>
+		</footer>
+	</div>
+  </body>
+</html> 
