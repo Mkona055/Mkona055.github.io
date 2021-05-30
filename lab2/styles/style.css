@@ -9,6 +9,12 @@ img {
 label {
   margin-left: 40px;
 }
+footer{
+  text-align: right;
+  color: black;
+  font-style: italic;
+  font-size: 75%;
+}
 
 .tab {
   overflow: hidden;
@@ -28,6 +34,7 @@ label {
   padding: 14px 16px;
   transition: 0.3s;
   color: white;
+  font-size:20px;
 }
 
 /* Change background color of buttons on hover */
