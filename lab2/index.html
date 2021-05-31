@@ -24,8 +24,7 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent" >
   <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-	Choose a Category:
+  <p>Tell us a bit about you. <br> Choose a Category:</p>
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct','organicSelect')">
 	<option value=""></option>
 	<option value="LacIntolerant">Lactose Intolerant</option>
@@ -35,7 +34,7 @@
 
 
 	<br>
-	Do you have a preference for organic products ?:
+	<p>Do you have a preference for organic products ?:</p>
 	<select id="organicSelect" name="organicSelect" onchange="populateListProductChoices('dietSelect', 'displayProduct',this.id)">
 	<option value="Non-Organic">No</option>
 	<option value="Organic">Yes</option>
