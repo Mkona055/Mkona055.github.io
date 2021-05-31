@@ -10,10 +10,10 @@ label {
   margin-left: 40px;
 }
 footer{
-  text-align: right;
+  text-align: center;
   color: black;
   font-style: italic;
-  font-size: 150%;
+  font-size: 15px;
 }
 h3{
  font-size: 50px; 
