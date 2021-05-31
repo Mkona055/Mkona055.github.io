@@ -24,7 +24,7 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent" >
   <h3>Client Information</h3>
-  <p>Tell us a bit about you. <br> Choose a Category:</p>
+  <p>Do you have any restrictions ?</p>
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct','organicSelect')">
 	<option value=""></option>
 	<option value="LacIntolerant">Lactose Intolerant</option>
@@ -34,7 +34,7 @@
 
 
 	<br>
-	<p>Do you have a preference for organic products ?:</p>
+	<p>Do you have a preference for organic products ?</p>
 	<select id="organicSelect" name="organicSelect" onchange="populateListProductChoices('dietSelect', 'displayProduct',this.id)">
 	<option value="Non-Organic">No</option>
 	<option value="Organic">Yes</option>
@@ -44,11 +44,11 @@
 
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
+  <p>We preselected products based on your restrictions.<br>
+	 Choose items to buy:</p>
 	 <div id="displayProduct"></div><br>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
+		ADD SELECTED ITEMS TO CART
 	</button>
 </div>
 

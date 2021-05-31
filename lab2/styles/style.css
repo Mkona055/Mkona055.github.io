@@ -13,7 +13,7 @@ footer{
   text-align: right;
   color: black;
   font-style: italic;
-  font-size: 75%;
+  font-size: 85%;
 }
 h3{
  font-size: 50px; 
@@ -21,10 +21,7 @@ h3{
 p{
   font-size: 30px; 
 }
-.dietSelect{
-  width: 25%;
-  height: 25%;
-}
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
@@ -78,5 +75,32 @@ p{
 #price{
    margin-left: 60px;
    font-style: italic;
+   font-weight: bold;
+   font-size: 20px;
 
+}
+#dietSelect{
+  width: 35%;
+  height: 40px;
+  font-size: 20px; 
+}
+#organicSelect{
+  width: 35%;
+  height: 40px;
+  font-size: 20px; 
+}
+#prod{
+  font-size: 25px;
+}
+#prodName{
+  font-size: 25px;
+}
+#addCart{
+  color: white;
+  background-color: FireBrick;
+  width: 300px;
+  height: 70px;
+}
+.block: hover{
+  background-color: DarkRed;
 }

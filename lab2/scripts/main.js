@@ -50,11 +50,12 @@ function populateListProductChoices(slct1, slct2,slct3) {
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
-		checkbox.value = product.name + "price:" + product.price + "$";
+		checkbox.value = product.name + "Price:" + product.price + "$";
 		s2.appendChild(checkbox);
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
+		label.id = "prod";
 		label.htmlFor = product.name;
 		label.appendChild(document.createTextNode(product.name));
 		label.appendChild(document.createElement("br"));
@@ -93,9 +94,10 @@ function selectedItems(){
 		if (ele[i].checked) {
 
 			var val = ele[i].value;
-			var name = val.slice(0,val.indexOf("price"));
-			var price = val.slice(val.indexOf("price"), val.length);
+			var name = val.slice(0,val.indexOf("Price"));
+			var price = val.slice(val.indexOf("Price"), val.length);
 			var labelForName = document.createElement("label");
+				labelForName.id = "prodName";
 			var labelForPrice = document.createElement("label");
 				labelForPrice.id = "price";
 			
@@ -109,10 +111,10 @@ function selectedItems(){
 			chosenProducts.push(name);
 		}
 	}
-		
+	para.appendChild(document.createElement("br"));
+	para.appendChild(document.createTextNode("Total price is " + getTotalPrice(chosenProducts).toPrecision(3) + " $"));
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts).toPrecision(3) + " $"));
 	alert("Your items were succesfully added to your cart")	;
 }
 
