@@ -18,6 +18,9 @@ footer{
 h3{
  font-size: 50px; 
 }
+p{
+  font-size: 30px; 
+}
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
