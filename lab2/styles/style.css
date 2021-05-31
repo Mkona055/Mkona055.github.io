@@ -21,6 +21,10 @@ h3{
 p{
   font-size: 30px; 
 }
+select{
+  width: 25%;
+  height: 25%;
+}
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
