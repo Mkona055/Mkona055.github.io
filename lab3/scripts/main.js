@@ -159,6 +159,8 @@ function selectedItems(){
 	var chosenProducts = [];
 	
 	var c = document.getElementById('displayCart');
+
+	var checkedEle= [];
 	c.innerHTML = "";
 	
 	// build list of selected item
@@ -168,7 +170,7 @@ function selectedItems(){
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-
+			checkedEle.push(ele[i]);
 			var val = ele[i].value;
 			var name = val.slice(0,val.indexOf("Unit"));
 			var price = val.slice(val.indexOf("Unit"), val.length);
@@ -201,6 +203,10 @@ function selectedItems(){
 			para.appendChild(labelForQuantity);
 
 			chosenProducts.push(name);
+		}
+		if(i ==ele.length - 1 && checkedEle.length == 0){
+			alert("You did not select any products");
+			exit();
 		}
 	}
 	para.appendChild(document.createElement("br"));
