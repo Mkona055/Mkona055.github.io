@@ -1,0 +1,335 @@
+/*
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: DarkRed;
+}
+
+
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+#mySlides {
+  width : 700px;
+  height: 300px;
+}
+
+/* Next & previous buttons */
+.prev{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  background-color:FireBrick;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 80%;
+  text-align: center;
+  font-family:Helvetica;
+}
+#textModal {
+  color: white;
+  background-color:FireBrick;
+  font-size: 30px;
+  width: auto;
+  text-align: center;
+  font-family:Helvetica;
+}
+#modalLabel{
+  font-size: 20px;
+  font-family:Helvetica;
+}
+#buttonModal{
+  margin-left: auto;
+  color: white;
+  background-color: FireBrick;
+  width: 200px;
+  height: 60px;
+  
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: relative;
+  top: 0;
+  font-family:Helvetica;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+/* Style the tab */
+img {
+  display: block;
+  margin: 0 auto;
+  align: center;
+}
+label {
+  margin-left: 40px;
+}
+footer{
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-size: 15px;
+}
+h3{
+ font-size: 50px; 
+}
+p{
+  font-size: 30px; 
+}
+body{
+  background-color:DarkGray;
+}
+
+
+.accordion {
+  overflow: hidden;
+  border: 2px solid DarkGray;
+  background-color : FireBrick;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  color: white;
+  outline: none;
+  transition: 0.4s;
+  font-size:20px;
+  align-self: center;;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+
+
+/* Style the buttons that are used to open the tab content */
+.accordion button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: white;
+  font-size:20px;
+}
+
+/* Change background color of buttons on hover */
+.accordion:hover {
+  background-color: DarkRed;
+}
+
+/* Create an active/current tablink class */
+.accordion:active {
+  background-color: DarkRed;
+}
+
+/* Style the tab content */
+#Client, #Cart {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid FireBrick;
+  border-top: none;
+  font-family:Helvetica;
+  background-color: white;
+  overflow: hidden;;
+}
+#Products{
+  display: none;
+  height:550px;
+  padding: 6px 12px;
+  border: 1px solid FireBrick;
+  border-top: none;
+  font-family:Helvetica;
+  background-color: white;
+  overflow: scroll;;
+}
+
+#checkboxIcon{
+  margin-left:60px;
+  width: 50px;
+  height: 50px;
+}
+
+#cart_button{
+  float: right;
+}
+#epicerie{
+  margin:0 auto;
+  width: 20%;
+  height: 50%;
+}
+#price{
+   margin-left: 60px;
+   font-style: italic;
+   font-weight: bold;
+   font-size: 20px;
+
+}
+#qtty{
+  margin-left: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#dietSelect{
+  width: 35%;
+  height: 40px;
+  font-size: 20px; 
+}
+#organicChoice{
+  font-size: 50px; 
+}
+#prod{
+  font-size: 25px;
+}
+#prodName{
+  font-size: 25px;
+}
+#addCart, #pickup, #delivery{
+  color: white;
+  background-color: FireBrick;
+  width: 300px;
+  height: 70px;
+  margin: auto;
+}
+#savePreferences{
+  color: white;
+  background-color: FireBrick;
+  width: 200px;
+  height: 70px;
+}
+.block: hover{
+  background-color: DarkRed;
+}
+
+
+/*src:  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal;
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
