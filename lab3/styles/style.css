@@ -104,11 +104,12 @@
   position: relative;
   top: 0;
   font-family:Helvetica;
+  display: none;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  
+
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -155,7 +156,9 @@ footer{
   text-align: center;
   color: black;
   font-style: italic;
-  font-size: 15px;
+  font-weight: bold;
+  font-family: Helvetica;
+  font-size: 20px;
 }
 h3{
  font-size: 50px; 
