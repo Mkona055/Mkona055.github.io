@@ -137,6 +137,7 @@ function populateListProductChoices(slct1, slct2,slct3) {
 
 		var quantity = document.createElement("input");
 		quantity.type = "number";
+		quantity.min = 1;
 		quantity.id = "quantity"+product.name;
 		quantity.value = 1;
 		s2.appendChild(quantity);
