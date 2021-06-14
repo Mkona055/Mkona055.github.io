@@ -1,0 +1,58 @@
+body{
+    background-image: url("../images/paws.png");
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+    background-size: cover;
+}
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+    font-family: 'Montserrat'; 
+}
+button{
+   background-color: rgba(0, 153, 153, 0.86);
+}
+label{
+    font-family: 'Montserrat'; 
+    font-weight: bold;
+}
+h1,h3{
+    margin: auto;
+    font-family: 'Montserrat'; 
+}
+h4{
+    
+    font-family: 'Montserrat'; 
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 153, 153, 0.86);
+    border-color: rgba(0, 153, 153, 0.86);;
+}
+#close{
+    background-color: black;
+}
+.header{
+    font-family: 'Montserrat';
+    color: white; 
+}
+.card-body{
+    font-family: 'Montserrat'; 
+}
+.card-title{
+    font-weight: bold;
+    color: rgba(0, 153, 153, 0.86);
+}
+
+.title{
+    margin: auto;
+}
+#navbar{
+    border-width: 100px;
+}

@@ -1,0 +1,501 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <title>Module 4 Lab</title>
+</head>
+<body style= "background-color: rgba(0, 153, 153, 0.86);">
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div class = "container-lg" >
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+    <div class = "nav-header">
+        <nav class="navbar border border-light text-dark p-3 my-3 " style= "background-color: rgba(0, 153, 153, 0.86) ;" id="navbar">
+            <h1><img src="images/logo.png" width="130" height="130"> <label class="title"><strong>Clinique Vétérinaire Coranimo</strong></label></h1>
+        </nav>
+
+        <nav class="navbar border border-light   text-dark  p-1 my-1" style= "background-color: rgba(0, 153, 153, 0.86);" id="navbar">
+            <h3 style = "padding-left: 2.5rem;"><img src="images/location.png" width="50" height="50">     2-328 avenue de la Rochelle, GATINEAU, QC, X0X J0J</h3>
+        </nav>
+    </div>
+
+    <br>
+    <h1 class="header">Nos services</strong></h1>
+    <br>
+    <div class="row row-cols-1 row-cols-md-2 g-5">
+        <div class="col">
+            <div class="card bg-light border border-light">
+              <div class="card-body ">
+                    <h4 class = "card-title">Soins de routine</h4><br>
+                    <p class="card-text">Nous croyons que les soins vétérinaires devraient être adaptés pour chaque individu et leur famille. Nous offrons ainsi des soins et des examens de routine afin de maintenir votre  animal en parfaite santé.<br><br>
+                    <strong>Prix: </strong> 25$-50$
+                   </p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalRoutine">Prendre rendez-vous</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-light border border-light">
+              <div class="card-body ">
+                <h4 class = "card-title">Tests diagnostiques en clinique</h4><br>
+                <p class="card-text">Notre laboratoire en clinique ainsi que notre système de radiographie numérique sont connectés à notre logiciel vétérinaire ce qui permet de recevoir les résultats de ces tests importants rapidement.<br><br>
+                    <strong>Prix: </strong> 30$-60$
+                   </p>
+                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalTests">Prendre rendez-vous</button>
+                
+              </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-light border border-light">
+              <div class="card-body ">
+                <h4 class = "card-title">Chirurgie</h4><br>
+                <p class="card-text">Nous effectuons quotidiennement plusieurs chirurgies de routine (castrations, ovariohystérectomies) en plus de certaines chirurgies orthopédiques de base ou chirurgies tissus mous.<br><br>
+                    <strong>Prix: </strong> 80$-120$
+                   </p>
+                <button class="btn btn-dark"  data-bs-toggle="modal" data-bs-target="#modalChirurgie">Prendre rendez-vous</button>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-light border border-light">
+              <div class="card-body ">
+                <h4 class = "card-title">Dentisterie</h4><br>
+                <p class="card-text">Il a été démontré que la prévention et le traitement de la maladie dentaire sont extrêmement importants afin de maintenir votre animal en santé ainsi que de lui assurer une bonne qualité de vie.<br><br>
+                    <strong>Prix: </strong> 20$-40$
+                   </p>
+                <button class="btn btn-dark"  data-bs-toggle="modal" data-bs-target="#modalDentisterie">Prendre rendez-vous</button>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-light border border-light">
+              <div class="card-body ">
+                <h4 class = "card-title">Vaccinations</h4><br>
+                <p class="card-text">La Clinique Vétérinaire Coranimo offre l’ensemble des vaccins pour prévenir les maladies infectieuses dont votre animal pourrait souffrir.<br><br>
+                    <strong>Prix: </strong> 45$
+                   </p>
+                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalVaccinations">Prendre rendez-vous</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="modalRoutine" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalRoutine">Prise de rendez-vous pour des soins de routine</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="was-validated">
+
+                        <div class="form-group">
+                            <label for="name">Nom:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" name="name" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                         <div class="form-group">
+                            <label for="suname">Prénom:</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Entrez votre prénom" pattern="[A-Za-z]+" name="surname" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champs sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="Entrez votre numéro de téléphone" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ avec seulement des chiffres</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" name="email"  required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ correctement</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Sélectionner une date:</label>
+                            <input type="date" class="form-control" id="date"  name="date" required>
+                            <div class="invalid-feedback">Veuillez selectionner une date pour votre rendez-vous .</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Sélectionner une heure:</label>
+                            <input type="time" class="form-control" id="time"  name="time" min="8:00" max="23:00" required>
+                            <div class="invalid-feedback">Veuillez selectionner une heure pour votre rendez-vous.</div>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark border border-secondary bg-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modalSuccess" >Confirmer le rendez-vous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTests" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalTests">Prise de rendez-vous pour des tests diagnostiques en clinique</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="was-validated">
+
+                        <div class="form-group">
+                            <label for="name">Nom:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" name="name" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                         <div class="form-group">
+                            <label for="suname">Prénom:</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Entrez votre prénom" pattern="[A-Za-z]+" name="surname" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champs sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="Entrez votre numéro de téléphone" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ avec seulement des chiffres</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" name="email"  required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ correctement</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Sélectionner une date:</label>
+                            <input type="date" class="form-control" id="date"  name="date" required>
+                            <div class="invalid-feedback">Veuillez selectionner une date pour votre rendez-vous .</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Sélectionner une heure:</label>
+                            <input type="time" class="form-control" id="time"  name="time" min="8:00" max="23:00" required>
+                            <div class="invalid-feedback">Veuillez selectionner une heure pour votre rendez-vous.</div>
+                        </div>
+
+                        
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark border border-secondary bg-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modalSuccess" >Confirmer le rendez-vous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalChirurgie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalChirurgie">Prise de rendez-vous pour une chirurgie</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="was-validated">
+
+                        <div class="form-group">
+                            <label for="name">Nom:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" name="name" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                         <div class="form-group">
+                            <label for="suname">Prénom:</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Entrez votre prénom" pattern="[A-Za-z]+" name="surname" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champs sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="Entrez votre numéro de téléphone" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ avec seulement des chiffres</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" name="email"  required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ correctement</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Sélectionner une date:</label>
+                            <input type="date" class="form-control" id="date"  name="date" required>
+                            <div class="invalid-feedback">Veuillez selectionner une date pour votre rendez-vous .</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Sélectionner une heure:</label>
+                            <input type="time" class="form-control" id="time"  name="time" min="8:00" max="23:00" required>
+                            <div class="invalid-feedback">Veuillez selectionner une heure pour votre rendez-vous.</div>
+                        </div>
+
+                        
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark border border-secondary bg-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modalSuccess" >Confirmer le rendez-vous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalDentisterie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalDentisterie">Prise de rendez-vous pour la dentisterie</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="was-validated">
+
+                        <div class="form-group">
+                            <label for="name">Nom:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" name="name" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                         <div class="form-group">
+                            <label for="suname">Prénom:</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Entrez votre prénom" pattern="[A-Za-z]+" name="surname" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champs sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="Entrez votre numéro de téléphone" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ avec seulement des chiffres</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" name="email"  required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ correctement</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Sélectionner une date:</label>
+                            <input type="date" class="form-control" id="date"  name="date" required>
+                            <div class="invalid-feedback">Veuillez selectionner une date pour votre rendez-vous .</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Sélectionner une heure:</label>
+                            <input type="time" class="form-control" id="time"  name="time" min="8:00" max="23:00" required>
+                            <div class="invalid-feedback">Veuillez selectionner une heure pour votre rendez-vous.</div>
+                        </div>
+
+                        
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark border border-secondary bg-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modalSuccess" >Confirmer le rendez-vous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalVaccinations" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalVaccinations">Prise de rendez-vous pour la vaccination</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="was-validated">
+
+                        <div class="form-group">
+                            <label for="name">Nom:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" name="name" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                         <div class="form-group">
+                            <label for="suname">Prénom:</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Entrez votre prénom" pattern="[A-Za-z]+" name="surname" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champs sans utiliser des nombres et caractères spéciaux.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="Entrez votre numéro de téléphone" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ avec seulement des chiffres</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" name="email"  required>
+                            <div class="invalid-feedback">Veuillez remplir ce champ correctement</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Sélectionner une date:</label>
+                            <input type="date" class="form-control" id="date"  name="date" required>
+                            <div class="invalid-feedback">Veuillez selectionner une date pour votre rendez-vous .</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Sélectionner une heure:</label>
+                            <input type="time" class="form-control" id="time"  name="time" min="8:00" max="23:00" required>
+                            <div class="invalid-feedback">Veuillez selectionner une heure pour votre rendez-vous.</div>
+                        </div>
+
+                        
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark border border-secondary bg-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modalSuccess" >Confirmer le rendez-vous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal Success HTML -->
+    <div id="modalSuccess" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="bi bi-check-lg"></i>
+                    </div>              
+                    <h2 class="modal-title">Fantastique!</h2>   
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-left">Votre réservation a été effectuée avec succès. Veuillez consulter votre boîte mail afin de recevoir les détails concernat votre rendez vous de détails.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark btn-block" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>     
+
+        
+
+
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+    
+
+    <!--
+    We can also use buttons to expand some hidden options
+    https://getbootstrap.com/docs/5.0/components/collapse/
+    -->
+    <br>
+    <h1 class="header">À propos de nous</h1>
+    <br>
+    
+    <!-- This example is using what is called an accordian, this is one of three examples
+    https://getbootstrap.com/docs/5.0/components/accordion/
+    -->
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item ">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                   <h4>Nos vétérinaires</h3>
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card border border-dark h-100" >
+                                <img src="images/doctor.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class=card-title>Dr. Ann Joe</h4>
+                                    <p class="card-text">Diplomée de l'Université d'Ottawa, Dr. Ann a une très bonne maîtrise des vaccins et les différentes maladies qui pourront prendre votre animal pour cible.</p><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border border-dark h-100" >
+                                <img src="images/doctor1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class=card-title>Dr. Mary Easter</h4>
+                                    <p class="card-text">Diplomée de l'Université d'Oxford, Dr. Mary sait diagnostiquer avec précision  l'état de santé de votre animal éventuellement à l'aide d'analyses biologiques ou de l'imagerie médicale.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border border-dark h-100">
+                                <img src="images/doctor2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class=card-title>Dr. Diomandé Francis</h4>
+                                    <p class="card-text">Diplomé d l'Université de Harvard, Dr. Diomandé est un spécialiste dans les interventions chirurgicales. Il est venu en aide à plus de 100 animaux.</p><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item ">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                   <h4>Contactez-nous</h3>
+
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><strong style="color: rgba(0, 153, 153, 0.86);">Addresse:  </strong> 2-328 avenue de la Rochelle, GATINEAU, QC, X0X J0J</p>
+                    <p><strong style="color: rgba(0, 153, 153, 0.86);">Téléphone: </strong> (819) 787 7878</p>
+                    <p><strong style="color: rgba(0, 153, 153, 0.86);">Fax: </strong> (819) 887 8878</p>
+                    <p><strong style="color: rgba(0, 153, 153, 0.86);">email: </strong>coranimovet@gmail.com</p>
+                </div>
+            </div>
+        </h4>
+    </div>
+    <div class="footer">
+        Site créé par Senpai
+    </div>
+
+</div>
+
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; 
+    var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("date").setAttribute("min", today);
+
+</script>
+</body>
+</html>
