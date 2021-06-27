@@ -55,6 +55,7 @@ $(document).ready(function(){
     });
 
     $("#confirmBtn").click(function(){
+
     	var dateOk = false;
     	if($("#date-form").prop("disabled") == true){
     		$(".alert").show();
@@ -80,8 +81,10 @@ $(document).ready(function(){
     	}else if (dateOk){
     		$(".modal-content").effect("shake");
     		$(".alertDate").hide();
+    		$("#subBtn").click();
     	}else{
     		$(".modal-content").effect("shake");
+    		$("#subBtn").click();
     	}
     	
     });

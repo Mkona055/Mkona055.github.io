@@ -150,23 +150,23 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         <br>
                         <div class="form-group">
                             <label for="name">Nom:</label>
-                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" pattern="[A-Za-z]+" name="name" required>
-                            <div class="invalid-feedback">Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux.</div>
+                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" pattern="([A-Za-z](\s)?)+" name="name" oninvalid="this.setCustomValidity('Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux')" oninput="this.setCustomValidity('')" required>
+                            
                         </div>
                          <div class="form-group">
                             <label for="suname">Prénom:</label>
-                            <input type="text" class="form-control" id="surname" placeholder="Entrez votre prénom" pattern="[A-Za-z]+" name="surname" required>
-                            <div class="invalid-feedback">Veuillez remplir ce champs sans utiliser des nombres et caractères spéciaux.</div>
+                            <input type="text" class="form-control" id="surname" placeholder="Entrez votre prénom" pattern="([A-Za-z](\s)?)+" name="surname" oninvalid="this.setCustomValidity('Veuillez remplir ce champ sans utiliser des nombres et caractères spéciaux')" oninput="this.setCustomValidity('')" required>
+                            
                         </div>
                         <div class="form-group">
                             <label for="phoneNumber">Numéro de téléphone:</label>
                             <input type="text" class="form-control" placeholder="(xxx)-xxx-xxxx" pattern= "\([0-9]{3}\)-[0-9]{3}-[0-9]{4}" data-inputmask="'mask': '(999)-999-9999'"  required>
-                            <div class="invalid-feedback">Veuillez remplir ce champ avec seulement des chiffres</div>
+                            
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" placeholder="Entrez votre email" name="email"  required>
-                            <div class="invalid-feedback">Veuillez remplir ce champ correctement</div>
+                            
                         </div>
                         <br>
                         <label for="name" id = "label-title"><img src= "images/reservation2.png"> Informations du rendez-vous</label>
@@ -174,7 +174,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         <div class="form-group" >
                             <label for="date">Sélectionner un vétérinaire:</label><br>
                             <div class = "alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Erreur! </strong>Veuillez sélectionner un vétérinaire 
+                                <strong>Incomplet! </strong>Veuillez sélectionner un vétérinaire 
                             </div>
                             <div class="row row-cols-1 row-cols-md-3 g-3">
                                 <div class="col" >
@@ -221,7 +221,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         <div class="form-group" >
                             <label for="date">Sélectionner une date:</label>
                             <div class = "alertDate alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Erreur! </strong>Veuillez sélectionner une date sur le calendrier
+                                <strong>Incomplet! </strong>Veuillez sélectionner une date sur le calendrier
                                 
                             </div>
                             <input class="form-control" id="date-form"  placeholder="dd/mm/yyyy"  readonly='true' name="date-form" required disabled>
@@ -237,8 +237,9 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         <div class="form-group">
                             <label for="bankCard">Numéro de carte bancaire:</label>
                             <input type="text" class="form-control" placeholder= "xxxx xxxx xxxx xxxx" pattern= "[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" data-inputmask="'mask': '9999 9999 9999 9999'"  required>
-                            <div class="invalid-feedback">Veuillez remplir ce champ correctement</div>
+                            
                         </div>
+                        <button  class="btn btn-dark" id="subBtn" style="display:none;">Confirmer le rendez-vous</button>
                         
                     </form>
                     <div class="modal-footer">
