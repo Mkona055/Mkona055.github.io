@@ -33,7 +33,7 @@ h4{
     
     font-family: 'Montserrat'; 
 }
-#servicesbar{
+#servicesbar, #coranimo{
     
     font-family: 'Montserrat'; 
     font-size: 30px;
@@ -43,7 +43,15 @@ h4{
     font-family: 'Montserrat'; 
     font-size: 30px;
 }
-
+.shrink {
+    
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    transition: .8s all;
+    padding: 12px;
+    opacity: .95;
+  }
 .btn{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -76,7 +84,7 @@ h4{
    background-color:white;
     margin: auto;
 }
-#navbar{
+#navbar, #navbarshort, #navbarlong{
     margin: auto;
     border-width: 100px;
     
@@ -115,7 +123,7 @@ h4{
 
 }
 
-.alert ,.alertDate{
+.alert ,.alertDate,{
     display:none;
 }
 .ui-datepicker { font-size:20px; }

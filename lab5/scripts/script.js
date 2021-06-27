@@ -1,23 +1,26 @@
 
+
+var doctorChosen = "";
+
+var dateSelected ="";
+var timeSelected ="";
+const setDateFormat = "dd/mm/yy";
+
 function enableDate(dateform){
 	var datefield = document.getElementsByName(dateform)[0];
 	datefield.disabled = false;
 }
-
-var doctorChosen = "";
-const setDateFormat = "dd/mm/yy";
-
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 0 || date.getDay()===6){
         return [false];
     }
-    if(doctorChosen == "Anny"){
+    if(doctorChosen == "Anny Joenas"){
     	if(date.getDay() === 1 || date.getDay() === 3 || date.getDay() === 5){
     		return [false];
     	}
     	return [true];
-    }else if(doctorChosen == "Mary"){
+    }else if(doctorChosen == "Mary Easter"){
     	if(date.getDay() === 1 || date.getDay() === 3){
     		return [true];
     	}
@@ -31,6 +34,20 @@ function disableDates(date) {
     
 }
 $(document).ready(function(){
+
+	$(document).on("scroll", function(){
+	    if($(document).scrollTop() > 100){
+	      $("#nav").addClass("fixed-top");
+	      $("#navbarshort").prepend($("#img"));
+	      $("#img").show()
+	      
+	    } else {
+	      $("#nav").removeClass("fixed-top");
+	      $("#img").hide();
+	      
+	    }
+  	});
+
 	$("#btnRoutine").on("click", function(){
 		$(".modal-title").text("Prise de rendez-vous pour des soins de routine");
 	});
@@ -54,17 +71,25 @@ $(document).ready(function(){
         }
     });
 
-    $("#confirmBtn").click(function(){
+    $("#bankCard").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
+        }
+    });
 
+    $("#confirmBtn").click(function(){
+    	timeSelected = $("#time").val().toString();
+    	
     	var dateOk = false;
     	if($("#date-form").prop("disabled") == true){
     		$(".alert").show();
     		$(".alertDate").hide();
     	}else{
-    		var date = $("#date-form").datepicker('getDate');
-    		if(date == null){
+    		var date = $("#date-form").datepicker({ dateFormat: 'dd,MM,yyyy' }).val();
+    		if(date == ""){
     			$(".alertDate").show();
     		}else{
+    			dateSelected = $("#date-form").datepicker({ dateFormat: 'dd,MM,yyyy' }).val();
     			dateOk = true;
     		}
     		
@@ -76,8 +101,9 @@ $(document).ready(function(){
     		$('#form').trigger("reset");
     		$(".mini").removeClass("active");
     		$("h6").removeClass("tle");
-    		$('.radioBtn').prop("checked","false");
-    		$('.radioBtn').attr("checked","false");
+    		$('#docChosen').text(doctorChosen);
+    		$('#dateReserv').text(dateSelected.toString());
+    		$('#timeReserv').text(timeSelected.toString());
     	}else if (dateOk){
     		$(".modal-content").effect("shake");
     		$(".alertDate").hide();

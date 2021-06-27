@@ -50,10 +50,12 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         </nav>
         <br>
 
-        <nav class="navbar navbar-expand-md bg-dark border border-light navbar-dark static-top">
+        <nav class="navbar navbar-expand-md bg-dark border border-light navbar-dark static-top" id="nav">
             <div class="container">
+
                 <div class="collapse navbar-collapse" >
-                    <ul class="navbar-nav " id = "navbar">
+
+                    <ul class="navbar-nav " id = "navbarshort">
                         <li class="nav-item">
                             <a class="nav-link" href="#services" id="servicesbar"><img src="images/services2.png" alt="logo" style="margin-bottom: 10px;width:40px;"> Nos Services</a>
                         </li>
@@ -67,7 +69,9 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         </nav>
         <br>
     </div>
-        
+                        <li class="nav-item" id="img" style="display: none;">
+                            <a class="nav-link" href="#" id="coranimo" style="margin-right: 100px;"><img src="images/logonav.png" alt="logo" style="width:40px;"> Coranimo</a>
+                        </li>
 
 
 
@@ -186,7 +190,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                                                                   
                                         </div>
                                         <div class="card-footer">
-                                            <input type="radio"  class= "radioBtn" id="Anny" name="doctor">    
+                                            <input type="radio"  class= "radioBtn" id="Anny Joenas" name="doctor">    
                                         </div>
                                     </div>
                                 </div>
@@ -198,7 +202,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                            
                                         </div>
                                         <div class="card-footer">
-                                            <input type="radio"  class= "radioBtn" id="Mary" name="doctor">  
+                                            <input type="radio"  class= "radioBtn" id="Mary Easter" name="doctor">  
                                         </div>
                                     </div>
                                 </div>
@@ -210,7 +214,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                                               
                                         </div>
                                         <div class="card-footer">
-                                            <input type="radio"  class= "radioBtn" id="Diomandé" name="doctor">   
+                                            <input type="radio"  class= "radioBtn" id="Diomandé Francis" name="doctor">   
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +241,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         <br>
                         <div class="form-group">
                             <label for="bankCard">Numéro de carte bancaire:</label>
-                            <input type="text" class="form-control" placeholder= "xxxx xxxx xxxx xxxx" pattern= "[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" data-inputmask="'mask': '9999 9999 9999 9999'"  required>
+                            <input type="text" class="form-control" id ="bankCard" placeholder= "xxxx xxxx xxxx xxxx" pattern= "[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" data-inputmask="'mask': '9999 9999 9999 9999'"  title ="Vous serez débité uniquement si vous ne vous présentez pas au rendez-vous"required>
                             
                         </div>
                         <button  class="btn btn-dark" id="subBtn" style="display:none;">Confirmer le rendez-vous</button>
@@ -266,7 +270,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                     
                 </div>
                 <div class="modal-body">
-                    <p class="text-left">Votre réservation a été effectuée avec succès. Veuillez consulter votre boîte mail afin de recevoir les détails concernant votre rendez vous.</p>
+                    <p class="text-left">Votre réservation avec Dr. <label id ="docChosen"></label> a été effectuée avec succès. Veuillez vous rendre à nore clinique le <label id ="dateReserv"></label> à <label id ="timeReserv"></label>.</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-dark btn-block" data-bs-dismiss="modal">OK</button>
