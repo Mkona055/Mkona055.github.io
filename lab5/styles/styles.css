@@ -1,0 +1,123 @@
+body{
+    background-image: url("../images/paws.png");
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+    background-size: cover;
+}
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+    font-family: 'Montserrat'; 
+}
+button{
+   background-color: rgba(0, 153, 153, 0.86);
+}
+label{
+    font-family: 'Montserrat'; 
+    
+}
+#label-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0, 153, 153, 0.86);
+}
+h1,h2,h3{
+    margin: auto;
+    font-family: 'Montserrat'; 
+}
+h4{
+    
+    font-family: 'Montserrat'; 
+}
+#servicesbar{
+    
+    font-family: 'Montserrat'; 
+    font-size: 30px;
+}
+#aboutbar{
+
+    font-family: 'Montserrat'; 
+    font-size: 30px;
+}
+
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 153, 153, 0.86);
+    border-color: rgba(0, 153, 153, 0.86);;
+}
+#close{
+    background-color: black;
+}
+
+.header{
+    font-family: 'Montserrat';
+    color: white; 
+}
+.card-body{
+    font-family: 'Montserrat'; 
+}
+.card-title{
+    font-weight: bold;
+    color: rgba(0, 153, 153, 0.86);
+}
+
+
+.title{
+    margin: auto;
+}
+
+.card-footer{
+    border-top: white;
+   background-color:white;
+    margin: auto;
+}
+#navbar{
+    margin: auto;
+    border-width: 100px;
+    
+}
+
+.active, #miniCard:hover {
+    font-weight: bold;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 153, 153, 0.86);
+    box-shadow: 0px 0px 8px 0px #d4d4d4;
+    transition: 0.5s;
+}
+
+.active, #miniCard:hover .minicard-title{
+    font-weight: bold;
+}
+.tle{
+    font-weight: bold;
+}
+
+.selected{
+    font-weight: bold;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 153, 153, 0.86);
+    box-shadow: 0px 0px 8px 0px #d4d4d4;
+    transition: 0.5s;
+}
+
+.learn_more{
+    margin-bottom: 10px;
+    top: 160px;
+    width:20px
+
+
+}
+
+.alert ,.alertDate{
+    display:none;
+}
+.ui-datepicker { font-size:20px; }
+
