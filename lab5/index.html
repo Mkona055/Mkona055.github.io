@@ -45,23 +45,24 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             <h1><img src="images/logo.png" width="130" height="130"> <label class="title"><strong>Clinique Vétérinaire Coranimo</strong></label></h1>
         </nav>
 
-        <nav class="navbar border border-light   text-dark  p-1 my-1" style= "background-color: rgba(0, 153, 153, 0.86);" id="navbar">
+        <nav class="navbar border border-light  text-dark  p-1 my-1"  id="navbar">
             <h3 style = "padding-left: 2.5rem;"><img src="images/location.png" width="50" height="50">     2-328 avenue de la Rochelle, GATINEAU, QC, X0X J0J</h3>
         </nav>
         <br>
 
-        <nav class="navbar navbar-expand-md bg-dark border border-light navbar-dark ">
-        
-            <div class="collapse navbar-collapse" >
-                <ul class="navbar-nav " id = "navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services" id="servicesbar"><img src="images/services2.png" alt="logo" style="margin-bottom: 10px;width:40px;"> Nos Services</a>
-                    </li>
+        <nav class="navbar navbar-expand-md bg-dark border border-light navbar-dark static-top">
+            <div class="container">
+                <div class="collapse navbar-collapse" >
+                    <ul class="navbar-nav " id = "navbar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services" id="servicesbar"><img src="images/services2.png" alt="logo" style="margin-bottom: 10px;width:40px;"> Nos Services</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link " href="#about-us" id="aboutbar"><img src="images/info2.png" style=" margin-left:100px;width:40px;"> À propos de nous</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#about-us" id="aboutbar"><img src="images/info2.png" style=" margin-left:100px;width:40px;"> À propos de nous</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <br>
@@ -181,7 +182,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                                     <div class="mini card  h-100 hover-overlay hover-zoom"  id = "miniCard">
                                         <img src="images/doctor.jpg" class="card-img-top " alt="..." id = "miniCardImg">
                                         <div class="card-body" >
-                                            <h6 class="minicard-title" title="Diplomée de l'Université d'Ottawa, Dr. Anny a une très bonne maîtrise des vaccins et les différentes maladies qui pourront prendre votre animal pour cible.">Dr. Anny Joenas</h6>
+                                            <h6 class="minicard-title" >Dr. Anny Joenas <img class ="learn_more" title="Diplomée de l'Université d'Ottawa, Dr. Anny a une très bonne maîtrise des vaccins et les différentes maladies qui pourront prendre votre animal pour cible." src="images/learn_more.png"/></h6>
                                                                   
                                         </div>
                                         <div class="card-footer">
@@ -193,7 +194,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                                     <div class="mini card  h-100"  id = "miniCard" >
                                         <img src="images/doctor1.jpg" class="card-img-top" alt="..." id = "miniCardImg" >
                                         <div class="card-body"  >
-                                            <h6 class="minicard-title" title = "Diplomée de l'Université d'Oxford, Dr. Mary sait diagnostiquer avec précision  l'état de santé de votre animal éventuellement à l'aide d'analyses biologiques ou de l'imagerie médicale." >Dr. Mary Easter </h6>
+                                            <h6 class="minicard-title">Dr. Mary Easter <img class ="learn_more" title = "Diplomée de l'Université d'Oxford, Dr. Mary sait diagnostiquer avec précision  l'état de santé de votre animal éventuellement à l'aide d'analyses biologiques ou de l'imagerie médicale." src="images/learn_more.png"/></h6>
                            
                                         </div>
                                         <div class="card-footer">
@@ -205,7 +206,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                                     <div class="mini card  h-100"  id = "miniCard">
                                         <img src="images/doctor2.jpg" class="card-img-top" alt="..." id = "miniCardImg">
                                         <div class="card-body"  >
-                                            <h6 class="minicard-title" title = "Diplomé de l'Université de Harvard, Dr. Diomandé est un spécialiste dans les interventions chirurgicales. Il est venu en aide à plus de 100 animaux.">Dr. Diomandé Francis </h6>
+                                            <h6 class="minicard-title" >Dr. Diomandé Francis <img class ="learn_more" title = "Diplomé de l'Université de Harvard, Dr. Diomandé est un spécialiste dans les interventions chirurgicales. Il est venu en aide à plus de 100 animaux." src="images/learn_more.png"/></h6>
                                               
                                         </div>
                                         <div class="card-footer">
@@ -312,14 +313,20 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                                     <h4 class=card-title>Dr. Anny Joenas</h4>
                                     <p class="card-text">Diplomée de l'Université d'Ottawa, Dr. Anny a une très bonne maîtrise des vaccins et les différentes maladies qui pourront prendre votre animal pour cible.</p><br>
                                 </div>
+                                <div class="card-footer">
+                                    <p style=""><strong style="color: rgba(0, 153, 153, 0.86);">Disponibilité:</strong> Seulement les mardis et jeudis<p>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card border border-dark h-100" >
                                 <img src="images/doctor1.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h4 class=card-title>Dr. Mary Easter</h4>
+                                    <h4 class=card-title>Dr. Mary Easter </h4>
                                     <p class="card-text">Diplomée de l'Université d'Oxford, Dr. Mary sait diagnostiquer avec précision  l'état de santé de votre animal éventuellement à l'aide d'analyses biologiques ou de l'imagerie médicale.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p style=""><strong style="color: rgba(0, 153, 153, 0.86);">Disponibilité:</strong> Seulement les lundis et mercredis<p>
                                 </div>
                             </div>
                         </div>
@@ -329,6 +336,9 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                                 <div class="card-body">
                                     <h4 class=card-title>Dr. Diomandé Francis</h4>
                                     <p class="card-text">Diplomé de l'Université de Harvard, Dr. Diomandé est un spécialiste dans les interventions chirurgicales. Il est venu en aide à plus de 100 animaux.</p><br>
+                                </div>
+                                <div class="card-footer">
+                                    <p style=""><strong style="color: rgba(0, 153, 153, 0.86);">Disponibilité:</strong> Seulement les vendredis<p>
                                 </div>
                             </div>
                         </div>

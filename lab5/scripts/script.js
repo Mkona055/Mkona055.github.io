@@ -48,7 +48,7 @@ $(document).ready(function(){
 	});
 	$(".invalid-feedback").hide();
 
-	$(".minicard-title").tooltip({
+	$(".learn_more").tooltip({
         classes: {
             "ui-tooltip": "highlight"
         }
