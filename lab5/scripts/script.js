@@ -79,8 +79,8 @@ $(document).ready(function(){
 
     $("#confirmBtn").click(function(){
     	timeSelected = $("#time").val().toString();
-    	
     	var dateOk = false;
+    	
     	if($("#date-form").prop("disabled") == true){
     		$(".alert").show();
     		$(".alertDate").hide();
